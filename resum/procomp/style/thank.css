@@ -1,0 +1,74 @@
+body {
+
+    background-color: rgb(32, 32, 32);
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+    background-size: 10px 10px, 10px 10px, 10px 5px;
+    background-position: 0px 0px, 5px 5px, 0px 0px;
+  
+}
+
+@font-face {
+	font-family: "Bicubik Regular";
+	src: url("../fonts/bicubik-regular/bicubik-regular.eot"); /* IE9 Compat Modes */
+	src: url("../fonts/bicubik-regular/bicubik-regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		url("../fonts/bicubik-regular/bicubik-regular.otf") format("opentype"), /* Open Type Font */
+		url("../fonts/bicubik-regular/bicubik-regular.svg") format("svg"), /* Legacy iOS */
+		url("../fonts/bicubik-regular/bicubik-regular.ttf") format("truetype"), /* Safari, Android, iOS */
+		url("../fonts/bicubik-regular/bicubik-regular.woff") format("woff"), /* Modern Browsers */
+		url("../fonts/bicubik-regular/bicubik-regular.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+.alltext127 {
+    margin-top: 150px;
+    text-align: center;
+    color: #989898;
+    font-size: 70px;
+    font-family: "Bicubik Regular";
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1250px;
+    }
+  }
+  
+  .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .logoend {
+    display: flex;
+    justify-content: center; 
+  }

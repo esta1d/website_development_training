@@ -1,0 +1,117 @@
+@media screen and (max-width: 1200px) /*12000000000000000000000000000*/
+
+{
+    .order-work-glav  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .order-work-glav-flex {
+        width: 350px;
+    }
+    .wrap {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .toples {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 998px) {
+    .toples {
+        justify-content: space-evenly;
+    }
+    .wrapper {
+      display: none;
+    }
+    header {
+      display: none;
+    }
+    .hamburger {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: white;
+      position: fixed;
+      z-index: 5000;
+    }
+    .menu-btn-left2 {
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: white;
+      top: 10px;
+      left: 10px;  
+      position: fixed;
+      z-index: 5555;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .forma {
+    flex-direction: column-reverse;
+  }
+  .text-side-flex {
+    display: flex;
+    flex-direction: row;
+  }
+  .left-side {
+    padding: 0;
+    padding-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid rgb(155, 155, 155);
+  }
+  .order-work-glav-flex {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+  }
+  .skill-card {
+    width: 100%;
+  }
+  .component1 {
+    width: 100%;
+  }
+  .r200 {
+    float: none;
+    padding-top: 20px;
+  }
+  .price-text {
+    text-align: center;
+  }
+  .title-text {
+    font-size: 35px;
+  }
+  .ultext-glav {
+    font-size: 30px;
+  }
+  .button2 {
+    padding: 0;
+    padding: 10px 5px 10px 5px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  .glav {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .title-text {
+    font-size: 28px;
+  }
+  .ultext-glav {
+    font-size: 25px;
+  }
+  .button-up {
+    margin: 0;
+    font-size: 18px;
+    margin-top: 8px;
+  }
+  .button-up .fa-phone, .button-up .fa-circle-xmark, .button-up .fa-at {
+    font-size: 18px;
+  }
+}

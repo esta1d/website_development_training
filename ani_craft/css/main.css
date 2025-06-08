@@ -1,0 +1,229 @@
+@import url('../fonts/cyberpunk.css');
+@import url('../fonts/stylesheet.css');
+@import url('../fonts/style.css');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* font-family: 'BlenderProBook'; */
+}
+
+html, body {
+	height: 100%;
+	background-color: #2B474B;
+	color: #fff;
+}
+body {
+	font-size: 16px;
+	font-family: montserrat-g, sans-serif;
+}
+
+.slider {
+	height: 100%;
+}
+
+.slider__layer {
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center;
+	will-change: transform;
+}
+
+.slider__item {
+	overflow: hidden;
+	transform: scale(1.25)!important;
+	transition: 2s ease!important;
+}
+
+.slider__item:not(.swiper-slide-active) {
+	transform: scale(1)!important;
+}
+
+.slider-ui {
+	position: absolute;
+	z-index: 10;
+	inset: 0;
+}
+
+.top-line {
+	padding: 3.2em 0;
+	display: none;
+}
+
+.logo {
+	display: block;
+}
+
+.logo img {
+	display: block;
+	width: 15.5em;
+}
+
+.main-menu li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.main-menu li > * {
+	color: var(--gray-color);
+	text-transform: uppercase;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: .725em;
+	letter-spacing: .25em;
+	position: relative;
+}
+
+.main-menu li > *::before,
+.main-menu li > *::after {
+	content: '';
+	display: inline-block;
+	height: 2px;
+	background-color: var(--green-color);
+	width: 11.25px;
+	vertical-align: middle;
+	top: -1px;
+	left: -1.5px;
+	position: relative;
+	border-radius: 10em;
+	margin: 0 7.25px;
+	visibility: hidden;
+}
+
+.main-menu li.active > *,
+.main-menu li:hover > * {
+	color: var(--white-color);
+}
+
+.main-menu li.active > *::before,
+.main-menu li:hover > *::before,
+.main-menu li.active > *::after,
+.main-menu li:hover > *::after {
+	visibility: visible;
+}
+
+.button {
+	padding: 30px 60px;
+	transition: 0.5s;
+	color: #fff;
+	background-color: #3b3b3b6c;
+	backdrop-filter: blur(6px);
+	border: 1.5px solid transparent;
+	border-radius: 100px;
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 50px;
+	text-transform: uppercase;
+	box-shadow: 0px 0px 53px 9px rgba(0, 0, 0, 0.418);
+	cursor: pointer;
+	font-family: 'BlenderProBook';
+}
+.button2 {
+	margin-left: 30px;
+}
+
+.button:hover {
+	background-color: rgba(3, 3, 3, 0.685);
+}
+
+.submenu {
+	--anim-menu-btn-color: var(--gray-color);
+	--anim-menu-btn-gap: .195em;
+	--anim-menu-btn-width: 1.08em;
+}
+
+.header-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.header-content {
+	flex: 1;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1;
+	flex-direction: column;
+}
+
+.header-content__slide {
+	position: absolute;
+}
+
+.header-content h1 {
+	/* color: rgba(89, 0, 255, 0.5); */
+	text-transform: uppercase;
+	font-weight: 900;
+	font-family: 'Minecrafter';
+	text-shadow: 0px 0 12px rgba(0, 0, 0, 0.671);
+	font-size: 200px;
+	text-shadow: 0px 0px 22px rgba(0, 0, 0, 1);
+}
+
+.header-content p {
+	max-width: 560px;
+	font-weight: 600;
+	line-height: 1.4;
+	display: inline-block;
+	text-shadow: 0px 0px 22px rgba(0, 0, 0, 1);
+}
+
+.header-bottom {
+	min-height: 120px;
+}
+
+.letters .letter {
+	position: relative;
+	opacity: 0;
+	top: -5em;
+	transition: opacity var(--transition), top var(--transition);
+}
+
+.header-content__slide.active .letter {
+	opacity: 1;
+	top: 0;
+}
+
+.header-content__slide.active + * .letter {
+	top: 5em;
+}
+
+.header-content__info {
+	top: -18em;
+	position: relative;
+	opacity: 0;
+	font-family: 'BlenderProBook'; 
+	transition: opacity 1s ease, top 1.25s ease;
+	margin-top: 40px;
+}
+.startgame {
+	font-family: 'BlenderProBook' !important; 
+}
+.header-content__info p {
+	font-size: 80px;
+	font-family: 'BlenderProBook';
+	text-shadow: 0px 0 12px rgba(0, 0, 0, 0.671);
+}
+
+.header-content__slide.active .header-content__info {
+	opacity: 1;
+	top: 0;
+}
+
+.header-content__slide:has(* + .active .header-content__info),
+.header-content__slide.active + * .header-content__info {
+	top: 18em;
+}
+
+.slider-ui {
+	pointer-events: none;
+}
+
+.logo, .main-menu, .button, .submenu {
+	pointer-events: auto;
+}

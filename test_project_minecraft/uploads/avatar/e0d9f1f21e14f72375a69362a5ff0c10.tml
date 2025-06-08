@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="text_scroll">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nemo non neque itaque libero consequuntur, saepe iusto reprehenderit quaerat qui!</p>
+        </div>
+    </div>
+    
+
+    <style>
+.wrap {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    height: 2000px; /* Для демонстрации скролла */
+}
+
+.text_scroll {
+    padding: 10px;
+    width: 100%;
+    background-color: #0087cd;
+    position: absolute;
+    top: 300px; /* Начальная позиция блока */
+}
+
+.text_scroll p {
+    font-size: 40px;
+    transform: translateX(700px); /* Начальная позиция текста */
+    will-change: transform; /* Оптимизация производительности */
+}
+    </style>
+
+<script>
+document.addEventListener('scroll', function () {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    const textScroll = document.querySelector('.text_scroll');
+    const paragraph = textScroll.querySelector('p');
+    const wrap = document.querySelector('.wrap');
+
+    const blockPosition = textScroll.getBoundingClientRect(); // Положение блока относительно экрана
+    const blockTop = blockPosition.top; // Верхняя граница блока
+    const blockBottom = blockPosition.bottom; // Нижняя граница блока
+
+    // Проверка, входит ли блок в видимую область окна
+    if (blockTop <= window.innerHeight && blockBottom >= 0) {
+        // Блок на экране, начинаем скроллинг текста
+        const threshold = 1300;
+        const distanceFromThreshold = Math.max(0, scrollPosition - threshold);
+        const maxOffset = 700;
+        const newOffset = Math.min(distanceFromThreshold, maxOffset);
+
+        paragraph.style.transform = `translateX(${maxOffset - newOffset}px)`;
+    } else if (blockTop > 0) {
+        // Если блок уходит вверх, останавливаем анимацию текста
+        paragraph.style.transform = `translateX(700px)`;
+    }
+});
+</script>
+
+
+
+
+
+
+
+<!-- <style>
+.wrap {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    
+    .text_scroll {
+    padding: 10px;
+    width: 100%;
+    background-color: #0087cd;
+    }
+    
+    .text_scroll p {
+    font-size: 40px;
+    transform: translateX(700px); /* Начальная позиция вне экрана */
+    will-change: transform; /* Оптимизация производительности */
+    }
+
+</style>
+
+<script>
+document.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    const textScroll = document.querySelector('.text_scroll');
+    const paragraph = textScroll.querySelector('p');
+    
+    // Определяем начальную позицию элемента
+    let initialOffset = 700;
+    
+    // Проверка, находится ли элемент в пределах допустимого диапазона движения
+    if (scrollPosition > 900 && scrollPosition <= 2000) {
+        // Вычисление смещения текста относительно скролла
+        const offset = -(scrollPosition - 2000);
+        
+        paragraph.style.transform = `translateX(${offset}px)`;
+    } else if (scrollPosition < 900) {
+        // Фиксируем элемент на начальной позиции, если пользователь прокручивает назад
+        paragraph.style.transform = `translateX(${initialOffset}px)`;
+    }
+});
+</script> -->
+
+
+
+</body>
+</html>

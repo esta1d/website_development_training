@@ -1,0 +1,47 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/thank-you.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+</head>
+
+
+<body>
+
+  <div class="wrap">
+    <div class="flex">
+      <div class="pie" data-pie='{ 
+        "speed": 25,
+        "percent": 100,
+        "colorSlice": "#00c3e9",
+        "colorCircle": "#f1f1f1",
+        "round": true
+      }'></div>
+    </div>
+    <div class="block-txt wow fadeIn" data-wow-delay="5s">
+      <p>Thank you</p>
+      <i class="fa-solid fa-envelope-circle-check"></i>
+      <span>Message sent</span>
+    </div>
+  </div>
+  
+
+<script src="https://cdn.jsdelivr.net/gh/tomik23/circular-progress-bar@1.1.9/dist/circularProgressBar.min.js"></script>
+<script src="js/circularProgressBar.min.js"></script>
+<script>
+  const circle = new CircularProgressBar("pie");
+circle.initial();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/fde3711e6e.js" crossorigin="anonymous"></script>
+
+<script src="js/main.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.vide.min.js"></script>
+<script>
+    var wow = new WOW;
+    wow.init();
+</script>
+
+</body>
+</html>

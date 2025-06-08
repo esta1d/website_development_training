@@ -1,0 +1,9 @@
+[13-Nov-2024 23:58:29 Europe/Moscow] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/a1050018/domains/a1050018.xsph.ru/public_html/src/register.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/a1050018/domains/a1050018.xsph.ru/public_html/src/register.php on line 20
+[14-Nov-2024 00:01:08 Europe/Moscow] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':login' at line 1 in /home/a1050018/domains/a1050018.xsph.ru/public_html/src/register.php:20
+Stack trace:
+#0 /home/a1050018/domains/a1050018.xsph.ru/public_html/src/register.php(20): mysqli->prepare('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /home/a1050018/domains/a1050018.xsph.ru/public_html/src/register.php on line 20
